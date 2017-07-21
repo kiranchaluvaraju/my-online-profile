@@ -63,7 +63,7 @@
 
         <dependency>
             <groupId>com.kc.my.online.profile</groupId>
-            <artifactId>user-interface</artifactId>
+            <artifactId>frontend</artifactId>
             <version>${project.version}</version>
             <scope>runtime</scope>
         </dependency>
