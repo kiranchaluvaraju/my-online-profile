@@ -13,15 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.appengine.demos.springboot;
+package com.kc.apps.my.online.profile;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@RestController
-public class HelloworldController {
-  @GetMapping("/hello")
-  public String hello() {
-    return "Hello world!";
+@SpringBootApplication
+public class SpringBootExampleApplication {
+
+  public static void main(String[] args) {
+    SpringApplication.run(SpringBootExampleApplication.class, args);
   }
 }

@@ -1,38 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { ProductListComponent } from './products/product-list.component';
-import { ProductFilterPipe } from './products/product-filter.pipe';
-import { StarComponent } from './shared/star.component';
-import { WelcomeComponent } from './home/welcome.component';
-import { ProductDetailComponent } from './products/product-detail.component';
-
+import { NavigationComponent } from './navigation/navigation.component';
+import { HomeComponent } from './home/home.component';
+import { ResumeComponent } from './resume/resume.component';
 
 @NgModule({
-  imports: [ 
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    RouterModule.forRoot([
-      { path: 'products', component: ProductListComponent },
-      { path: 'product/:id', component: ProductDetailComponent },
-      { path: 'welcome', component: WelcomeComponent },
-      { path: '', redirectTo: 'welcome', pathMatch: 'full' },
-      { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
-    ])
+  declarations: [
+    AppComponent,
+    NavigationComponent,
+    HomeComponent,
+    ResumeComponent
   ],
-  declarations: [ 
-      AppComponent , 
-      ProductListComponent,
-      ProductFilterPipe,
-      StarComponent,
-      ProductDetailComponent,
-      WelcomeComponent
-    ],
-  bootstrap: [ AppComponent ]
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(
+      [
+        { path: 'home', component: HomeComponent },
+        { path: 'resume', component: ResumeComponent },
+        { path: '', redirectTo: 'home', pathMatch: 'full' },
+        { path: '**', redirectTo: 'home', pathMatch: 'full' }
+      ],
+      { useHash: true }
+    )
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

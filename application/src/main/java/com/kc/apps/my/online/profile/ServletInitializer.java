@@ -13,15 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.appengine.demos.springboot;
+package com.kc.apps.my.online.profile;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.support.SpringBootServletInitializer;
 
-@SpringBootApplication
-public class SpringBootExampleApplication {
+public class ServletInitializer extends SpringBootServletInitializer {
 
-  public static void main(String[] args) {
-    SpringApplication.run(SpringBootExampleApplication.class, args);
+  @Override
+  protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+    return application.sources(SpringBootExampleApplication.class);
   }
+
 }
