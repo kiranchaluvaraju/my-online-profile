@@ -8,6 +8,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { HomeComponent } from './home/home.component';
 import { ResumeComponent } from './resume/resume.component';
 import { FooterComponent } from './footer/footer.component';
+import { WordCloudComponent } from './home/word-cloud/word-cloud.component';
 
 @NgModule({
   declarations: [
@@ -15,11 +16,12 @@ import { FooterComponent } from './footer/footer.component';
     NavigationComponent,
     HomeComponent,
     ResumeComponent,
-    FooterComponent
+    FooterComponent,
+    WordCloudComponent
   ],
   imports: [
     BrowserModule,
-    HttpModule, 
+    HttpModule,
     RouterModule.forRoot(
       [
         { path: 'home', component: HomeComponent },
