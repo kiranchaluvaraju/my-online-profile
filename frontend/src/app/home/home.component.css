@@ -1,0 +1,27 @@
+.name {
+      font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif;
+      font-weight:700;
+      font-size: 4.00em;
+      display:block;
+      text-transform:uppercase;
+      color: white;
+}
+
+.title {
+    color: white; 
+    font-size: 2em;
+}
+
+div {
+  text-align: center;
+}
+
+span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.outer-line {
+  width: 25%;
+  border-bottom: 4px solid white;
+}
