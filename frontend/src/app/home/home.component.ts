@@ -4,7 +4,7 @@ import { HomeService } from './home.service';
 @Component({
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  providers: [ HomeService ]
+  providers: [HomeService]
 })
 export class HomeComponent implements OnInit {
   private errorMessage: string;
@@ -14,15 +14,16 @@ export class HomeComponent implements OnInit {
   getMessage(): void {
   }
 
+
   ngOnInit() {
     this.homeService
-              .getMessage()
-              .subscribe(
-                welcomeMessage => {
-                  this.welcomeMessage = welcomeMessage;
-                  console.log(welcomeMessage);
-                },
-                error => this.errorMessage = <any>error
-              );
+      .getMessage()
+      .subscribe(
+      welcomeMessage => {
+        this.welcomeMessage = welcomeMessage;
+        console.log(welcomeMessage);
+      },
+      error => this.errorMessage = <any>error
+      );
   }
 }

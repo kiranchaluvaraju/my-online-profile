@@ -12,4 +12,8 @@ export class NavigationComponent implements OnInit {
   ngOnInit() {
   }
 
+  goTo(location: string): void {
+    window.location.hash = '';
+    window.location.hash = location;
+  }
 }
